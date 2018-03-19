@@ -3,7 +3,7 @@ agent any
     stages{
         stage('Build'){
             steps{
-               sh 'mvn clean package'
+               sh -x 'c:/Program Files/Apache Software Foundation/apache-maven-3.5.3/bin/mvn clean package'
             }
             post{
                 success{
