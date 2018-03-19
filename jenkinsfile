@@ -27,14 +27,14 @@ agent any
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh -x "scp -i C:/Users/Admin/Desktop/EC2/MyNewKey.pem C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        sh -x "scp -i C:/Users/Admin/Desktop/EC2/MyNewKey.pem C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/target/Project2.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                         
                     }
                 }
 
                 stage ('Deploy to Production'){
                     steps {
-                        sh "scp -i C:/Users/Admin/Desktop/EC2/MyNewKey.pem C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        sh "scp -i C:/Users/Admin/Desktop/EC2/MyNewKey.pem C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/target/Project2.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                        
                     }
                 }
