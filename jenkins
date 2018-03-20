@@ -34,7 +34,7 @@ stages{
 
                 stage ('Deploy to Production'){
                     steps {
-                        sh 'scp -i C:/Users/Admin/Desktop/EC2/MyNewKey.pem C:/Program Files/Jenkins/workspace/FullyAutomated/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        sh "scp -i C:/Users/Admin/Desktop/EC2/MyNewKey.pem C:/Program Files/Jenkins/workspace/FullyAutomated/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
