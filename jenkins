@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-         string(name: 'tomcat_dev', defaultValue: '52.87.161.122', description: 'Staging Server')
+         string(name: 'tomcat_dev', defaultValue: '54.196.7.119', description: 'Staging Server')
          string(name: 'tomcat_prod', defaultValue: '52.90.186.238', description: 'Production Server')
     }
 
@@ -37,26 +37,13 @@ stages{
                  echo "***PWD*****"
                  pwd
                  echo "********SCP ***"
-                 scp -o 'StrictHostKeyChecking no' -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.87.161.122:/var/lib/tomcat7/webapps
+                 scp -o 'StrictHostKeyChecking no' -i C:/Users/Admin/Desktop/EC2/AWSkey.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@54.196.7.119:/var/lib/tomcat7/webapps
          '''
                         
                         }
                 }
 
-                stage ('Deploy to Production'){
-                      steps {
-                        sh '''#!/bin/bash
-                 echo "hello world"
-                 echo "++++++++++++++++++++++++++who am i"
-                 who am i
-                 echo "***pwd******"
-                 pwd
-                 echo "********SCP ***"
-                 scp -o 'StrictHostKeyChecking no' -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.90.186.238:/var/lib/tomcat7/webapps
-         '''
-                        
-                        }
-                }
+            
             }
         }
     }
