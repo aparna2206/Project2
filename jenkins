@@ -29,21 +29,22 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh '''
-                        #!/bin/bash
-                        who am i
-                        scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.87.161.122:/var/lib/tomcat7/webapps
-                        '''
+                        bash '''#!/bin/bash
+                 echo "hello world" 
+                 pwd
+         '''
+                        
                         }
                 }
 
                 stage ('Deploy to Production'){
                     steps {
-                    sh '''
-                        #!/bin/bash
-                        who am i
-                        scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.90.186.238:/var/lib/tomcat7/webapps
-                        '''
+                    
+                    steps {
+                        bash '''#!/bin/bash
+                 echo "hello world" 
+                 pwd
+         '''
                     }
                 }
             }
