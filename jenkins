@@ -33,6 +33,7 @@ stages{
                  echo "hello world"
                  echo "++++++++++++++++++++++++++who am i"
                  who am i
+                 echo $0
                  echo "***PWD*****"
                  pwd
                  echo "********SCP ***"
