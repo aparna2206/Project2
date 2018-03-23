@@ -31,6 +31,8 @@ stages{
                     steps {
                         sh '''#!/bin/bash
                  echo "hello world"
+                 echo "++++++++++++++++++++++++++who am i"
+                 who am i
                  echo "***PWD*****"
                  pwd
                  echo "********SCP ***"
@@ -44,6 +46,8 @@ stages{
                       steps {
                         sh '''#!/bin/bash
                  echo "hello world"
+                 echo "++++++++++++++++++++++++++who am i"
+                 who am i
                  echo "***pwd******"
                  pwd
                  echo "********SCP ***"
