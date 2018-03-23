@@ -38,9 +38,7 @@ stages{
                 }
 
                 stage ('Deploy to Production'){
-                    steps {
-                    
-                    steps {
+                      steps {
                         bash '''#!/bin/bash
                  echo "hello world" 
                  pwd
