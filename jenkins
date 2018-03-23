@@ -37,7 +37,7 @@ stages{
                  echo "***PWD*****"
                  pwd
                  echo "********SCP ***"
-                 scp -o 'StrictHostKeyChecking no' -i C:/Users/Admin/Desktop/EC2/AWSkey.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@54.196.7.119:/var/lib/tomcat7/webapps
+                 scp -i C:/Users/Admin/Desktop/EC2/AWSkey.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@54.196.7.119:/var/lib/tomcat7/webapps
          '''
                         
                         }
@@ -52,7 +52,7 @@ stages{
                  echo "***pwd******"
                  pwd
                  echo "********SCP ***"
-                 scp -o 'StrictHostKeyChecking no' -i C:/Users/Admin/Desktop/EC2/AWSkeyprod.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.91.205.200:/var/lib/tomcat7/webapps
+                 scp -i C:/Users/Admin/Desktop/EC2/AWSkeyprod.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.91.205.200:/var/lib/tomcat7/webapps
          '''
                         
                         }
