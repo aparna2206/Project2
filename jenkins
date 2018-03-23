@@ -29,8 +29,9 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bash '''#!/bin/bash
-                 echo "hello world" 
+                        sh '''#!/bin/bash
+                 echo "hello world"
+                 env
                  pwd
          '''
                         
@@ -39,8 +40,10 @@ stages{
 
                 stage ('Deploy to Production'){
                       steps {
-                        bash '''#!/bin/bash
+                        sh '''#!/bin/bash
+                    
                  echo "hello world" 
+                 env
                  pwd
          '''
                     }
