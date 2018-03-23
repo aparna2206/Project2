@@ -31,8 +31,10 @@ stages{
                     steps {
                         sh '''#!/bin/bash
                  echo "hello world"
-                 env
+                 echo "***PWD*****"
                  pwd
+                 echo "********SCP ***"
+                 scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.87.161.122:/var/lib/tomcat7/webapps
          '''
                         
                         }
@@ -41,12 +43,14 @@ stages{
                 stage ('Deploy to Production'){
                       steps {
                         sh '''#!/bin/bash
-                    
-                 echo "hello world" 
-                 env
+                 echo "hello world"
+                 echo "***pwd******"
                  pwd
+                 echo "********SCP ***"
+                 scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.90.186.238:/var/lib/tomcat7/webapps
          '''
-                    }
+                        
+                        }
                 }
             }
         }
