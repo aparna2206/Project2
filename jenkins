@@ -31,8 +31,8 @@ stages{
                     steps {
                         sh '''
                         #!/bin/bash
-                        echo `who am i`
-                        scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps
+                        who am i
+                        scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.87.161.122:/var/lib/tomcat7/webapps
                         '''
                         }
                 }
@@ -42,7 +42,7 @@ stages{
                     sh '''
                         #!/bin/bash
                         who am i
-                        scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps
+                        scp -i C:/Users/Admin/Desktop/EC2/KeyForJenkins.pem D:/Jenkins/workspace/pipelineproject/target/*.war ec2-user@52.90.186.238:/var/lib/tomcat7/webapps
                         '''
                     }
                 }
